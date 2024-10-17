@@ -23,7 +23,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
 setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
 
-async function getProducts(id: number) {
+async function getProducts() {
   const response = await fetch("https://fakestoreapi.com/products")
   if (!response.ok) {
     throw new Error("Erro ao buscar produto!")
@@ -33,4 +33,4 @@ async function getProducts(id: number) {
 }
 
 
-getProducts(1)
+getProducts()
